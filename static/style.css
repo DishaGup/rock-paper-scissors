@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 32px;
+    margin-top: 50px;
+}
+
+.game-container{
+   width: 60%;
+   margin: auto;
+   margin-top: 50px;
+   border: 2px solid black;
+   border-style: double;
+   padding: 60px;
+   border-radius: 20px;
+
+}
+
+button{
+  width: 130px;
+  margin: 20px;
+  padding: 30px;
+  font-size: 24px;
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+
+h2{
+    margin: 9px;
+   
+}
+
+span{
+    font-size: 22px;
+    color: gray;
+}
