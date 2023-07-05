@@ -1,10 +1,14 @@
 import random
 
-import random
-
 def play_game(user_choice):
     computer_choice = random.choice(["rock", "paper", "scissors"])
+    result = determine_result(user_choice, computer_choice)
+    return {
+        "computer_choice": computer_choice,
+        "result": result,
+    }
 
+def determine_result(user_choice, computer_choice):
     if user_choice == computer_choice:
         result = "It's a draw!"
     elif (
@@ -15,12 +19,7 @@ def play_game(user_choice):
         result = "You win!"
     else:
         result = "Computer wins!"
-
-    return {
-        "computer_choice": computer_choice,
-        "result": result,
-    }
-
+    return result
 
 if __name__ == "__main__":
     user_choice = input("Enter your choice (rock, paper, or scissors): ")

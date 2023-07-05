@@ -16,7 +16,7 @@ draws = 0
 def play():
     user_choice = request.json.get('choice')
     global user_wins, computer_wins, draws
-  
+
     game_result = play_game(user_choice)
     computer_choice = game_result['computer_choice']
     result = game_result['result']
@@ -31,6 +31,19 @@ def play():
     response = {
         'computer_choice': computer_choice,
         'result': result,
+        'user_wins': user_wins,
+        'computer_wins': computer_wins,
+        'draws': draws
+    }
+    return jsonify(response)
+
+@app.route('/restart', methods=['POST'])
+def restart_scores():
+    global user_wins, computer_wins, draws
+    user_wins = 0
+    computer_wins = 0
+    draws = 0
+    response = {
         'user_wins': user_wins,
         'computer_wins': computer_wins,
         'draws': draws
